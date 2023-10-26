@@ -17,6 +17,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -222,6 +223,46 @@ img {
 }
 /* Faq */
 
+/* Footer */
+.footer {
+  padding: 40px 0;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+.footer ul li {
+  line-height: 2.5;
+}
+
+.footer ul li a {
+  color: #ccc;
+}
+
+.footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.footer .card {
+  margin: 20px 30px 30px 0;
+}
+
+.footer input[type='email'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+/* End of footer */
 /* Utility Classes */
 .container {
   max-width: 1100px;
@@ -350,3 +391,125 @@ img {
 /* card utility */
 
 /* card */
+
+/* Hamburger button */
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  margin: 6px 0;
+}
+
+/* Mobile Menue */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300%;
+  width: 250px;
+  height: 100%;
+  z-index: 50;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu ul {
+  margin-top: 100px;
+  padding-right: 10px;
+}
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+.mobile-menu ul li a {
+  font-size: 20px;
+  transform: 0.3s;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+/* media query allows us to add specifc css for scpecifc screen sizes */
+/* Media */
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none;
+  }
+  .navbar .hamburger-button {
+    display: block;
+  }
+
+  .hero .container {
+    background: url('/images/hero-bg-mobile.png') no-repeat;
+    background-size: 350px;
+    background-position: bottom;
+    height: 770px;
+  }
+  .hero .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+  }
+  .hero .hero-text {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero .hero-button .btn {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Text */
+  .text-xl {
+    font-size: 1.9rem;
+  }
+  .text-lg {
+    font-size: 1.5rem;
+  }
+  .text-md {
+    font-size: 1.1rem;
+  }
+
+  .testimonials .testimonials-heading {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .testimonials .testimonials-grid,
+  .pricing .pricing-grid,
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .card {
+    margin-right: 0;
+  }
+  .footer .footer-grid > div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-xxl {
+    font-size: 2rem;
+  }
+}

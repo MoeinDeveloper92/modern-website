@@ -36,4 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     })
+
+
+
+})
+
+
+// Mobile Menue
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerButton = document.querySelector(".hamburger-button")
+    const mobileMenue = document.querySelector(".mobile-menu")
+    hamburgerButton.addEventListener('click', (e) => {
+        mobileMenue.classList.toggle('active')
+    })
 })
